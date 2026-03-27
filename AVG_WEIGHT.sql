@@ -8,7 +8,7 @@ WITH dates AS (
     artcl_num AS article_number,
     SUM(prrtd_pstd_sl_qty) AS TotalSaleQuantity,
     SUM(tlog_sl_wgt) AS TotalSaleWeight
-  FROM `lt-dia-lake-prd-consume.financial_reporting.sales_lcl_store_article_dly` T
+  FROM `project.dataset.table_transactions_store_article_day` T
     ,dates D
   WHERE trans_dt >= start_date
   GROUP BY 1
